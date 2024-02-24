@@ -12,7 +12,7 @@
                    - Symbol
                    - BigInt
 
-                2. Non-Primitive (Object) Data Types
+                2. Non-Primitive (Refrence) Data Types
                    - Objects
                    - Array
                    - Functions
@@ -64,3 +64,44 @@ let personDetails ={
     name: "Alok Kumar",
     age: 25 
 }
+
+
+
+
+/*                        MEMORY 
+
+    -> There are two type of memory 
+          1. Stack Memory (use of Primitive)
+          2. Heap Memory  (use of Non-Primitive)
+
+    
+    1. Stack Memory :- I will get a copy of whatever variables I have Decleared in the stack memory.
+    2. Heap Memory :- I will get a reference of whatever original value in the heap memory.
+
+
+
+*/
+
+
+//        STACK MEMORY
+
+let myName = "Alok Kumar"  // Stack Memory
+
+let anotherName = myName  // Stack Memory (copy of myMyName)
+anotherName = "Akash Kumar"
+console.log(myName)  // Alok Kumar
+console.log(anotherName)  // Alok Kumar
+
+
+//       HEAP MEMORY
+
+let userOne = {
+    email: "user@gmail.com",
+    password: "1234"
+}
+
+let userTwo = userOne  // Heap Memory (reference of userOne)
+userTwo.email = "alok@gmail.com"
+
+console.log(userOne.email)  
+console.log(userTwo.email)  
